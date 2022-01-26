@@ -14,14 +14,16 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return RepositoryProvider.value(
       value: todosRepository,
-      child: AppView(),
+      child: const AppView(),
     );
   }
 }
 
 class AppView extends StatelessWidget {
+  const AppView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: const HomeView());
+    return const MaterialApp(home: TodosOverviewPage());
   }
 }
