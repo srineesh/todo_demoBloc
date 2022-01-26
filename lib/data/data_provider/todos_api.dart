@@ -1,4 +1,4 @@
-import 'package:todo_final/data/model/todo.dart';
+import '../model/todo.dart';
 
 /// This is the layer that communicates with the shared prefrences or sqflite database.
 

@@ -3,8 +3,9 @@ import 'dart:convert';
 import 'package:meta/meta.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:todo_final/data/data_provider/todos_api.dart';
-import 'package:todo_final/data/model/todo.dart';
+
+import '../model/todo.dart';
+import 'todos_api.dart';
 
 ///This is the base API of all, this provides data that is needed and communicates with the todos_api which inturn communicates with the repository
 ///
