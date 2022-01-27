@@ -1,8 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:todo_final/business_logic/todo_view_filter.dart';
-import 'package:todo_final/data/model/todo.dart';
-import 'package:todo_final/data/repositories/todo_repository.dart';
+
+import '../../data/model/todo.dart';
+import '../../data/repositories/todo_repository.dart';
+import '../todo_view_filter.dart';
 
 part 'todos_overview_event.dart';
 part 'todos_overview_state.dart';

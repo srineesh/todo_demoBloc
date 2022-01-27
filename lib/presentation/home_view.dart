@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:todo_final/business_logic/bloc/todos_overview_bloc.dart';
-import 'package:todo_final/data/repositories/todo_repository.dart';
 
+import '../business_logic/bloc/todos_overview_bloc.dart';
+import '../data/repositories/todo_repository.dart';
+import 'add_todo/view/add_todo_page.dart';
 import 'widgets/todo_list_tile.dart';
 import 'widgets/todos_overview_filter_button.dart';
 import 'widgets/todos_overview_options_button.dart';
@@ -34,6 +35,11 @@ class TodosOverviewView extends StatelessWidget {
           TodosOverviewFilterButton(),
           TodosOverviewOptionsButton(),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        key: const Key('homeView_addTodo_floatingActionButton'),
+        onPressed: () => Navigator.of(context).push(AddTodoPage.route()),
+        child: const Icon(Icons.add),
       ),
       body: MultiBlocListener(
         listeners: [
